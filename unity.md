@@ -9,3 +9,8 @@
 #### unity memo ####
 [http://trick7.com/2013/11/dontusefindobject/](http://trick7.com/2013/11/dontusefindobject/)
 [http://trick7.com/2014/07/unity-memo/#more-766](http://trick7.com/2014/07/unity-memo/#more-766)
+
+
+#### download画像を表示 ####
+[サーバーから取得した画像をUnity上に表示する](http://forum.unity3d.com/threads/76852-asset-bundle-downloading-and-saving-to-device)
+[unity www 画像　保存](https://www.google.co.jp/webhp?sourceid=chrome-instant&ion=1&espv=2&es_th=1&ie=UTF-8#q=unity%20www%20%E7%94%BB%E5%83%8F%20%E4%BF%9D%E5%AD%98)
