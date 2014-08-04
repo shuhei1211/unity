@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE package SYSTEM "http://pear.php.net/dtd/package-1.0">
+<package version="1.0" packagerversion="1.4.6">
+ <name>Jsphon</name>
+ <summary>Converts to and from JSON format.</summary>
+ <description>This package provides methods to decode and encode data in JSON format.
+ </description>
+ <maintainers>
+  <maintainer>
+   <user>Hawk</user>
+   <name>Hawk</name>
+   <email>scholar@hawklab.jp</email>
+   <role>lead</role>
+  </maintainer>
+  </maintainers>
+ <release>
+  <version>1.0.1</version>
+  <date>2006-09-06</date>
+  <license>PHP License</license>
+  <state>stable</state>
+  <notes>Removed dependencies on PEAR_*
+  </notes>
+  <deps>
+   <dep type="php" rel="ge" version="4.3.0" optional="no"/>
+  </deps>
+  <provides type="class" name="Jsphon_Decoder" />
+  <provides type="function" name="Jsphon_Decoder::decode" />
+  <provides type="function" name="Jsphon_Decoder::decodeString" />
+  <provides type="function" name="Jsphon_Decoder::handleInternalError" />
+  <provides type="class" name="Jsphon_Encoder" />
+  <provides type="function" name="Jsphon_Encoder::encode" />
+  <provides type="class" name="Jsphon_Error" />
+  <provides type="function" name="Jsphon_Error::singleton" />
+  <provides type="function" name="Jsphon_Error::push" />
+  <provides type="function" name="Jsphon_Error::setThrowException" />
+  <provides type="function" name="Jsphon_Error::pushOnly" />
+  <provides type="class" name="Jsphon_Exception" extends="PEAR_Exception" />
+  <provides type="function" name="Jsphon_Exception::getTraceSafe" />
+  <provides type="class" name="Jsphon_Decoder_Tokenizer" />
+  <provides type="function" name="Jsphon_Decoder_Tokenizer::nextToken" />
+  <provides type="function" name="Jsphon_Decoder_Tokenizer::getToken" />
+  <provides type="function" name="Jsphon_Decoder_Tokenizer::getTokenValue" />
+  <provides type="class" name="Jsphon" />
+  <provides type="function" name="Jsphon::encode" />
+  <provides type="function" name="Jsphon::decode" />
+  <filelist>
+   <file role="php" baseinstalldir="/" name="Jsphon/Decoder.php"/>
+   <file role="php" baseinstalldir="/" name="Jsphon/Encoder.php"/>
+   <file role="php" baseinstalldir="/" name="Jsphon/Error.php"/>
+   <file role="php" baseinstalldir="/" name="Jsphon/Exception.php"/>
+   <file role="php" baseinstalldir="/" name="Jsphon/Decoder/Tokenizer.php"/>
+   <file role="test" baseinstalldir="/" name="tests/allTests.php"/>
+   <file role="test" baseinstalldir="/" name="tests/DecoderErrorPHP4NoPearTest.php"/>
+   <file role="test" baseinstalldir="/" name="tests/DecoderErrorPHP5NoPearTest.php"/>
+   <file role="test" baseinstalldir="/" name="tests/DecoderErrorPHP5Test.php"/>
+   <file role="test" baseinstalldir="/" name="tests/DecoderTest.php"/>
+   <file role="test" baseinstalldir="/" name="tests/Decoder_TokenizerTest.php"/>
+   <file role="test" baseinstalldir="/" name="tests/EncoderTest.php"/>
+   <file role="test" baseinstalldir="/" name="tests/lib/UnitTestCase.php"/>
+   <file role="php" baseinstalldir="/" name="Jsphon.php"/>
+  </filelist>
+ </release>
+ <changelog>
+   <release>
+    <version>1.0.1</version>
+    <date>2006-09-06</date>
+    <license>PHP License</license>
+    <state>stable</state>
+    <notes>Removed dependencies on PEAR_*
+    </notes>
+   </release>
+ </changelog>
+</package>
