@@ -46,7 +46,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Editor\Test1.cs" />
+     <Compile Include="Assets\WindowEditor\Editor\BaseEditor.cs" />
+     <Compile Include="Assets\WindowEditor\Editor\NormalWindow.cs" />
+     <Compile Include="Assets\WindowEditor\Editor\Test1.cs" />
+     <Compile Include="Assets\WindowEditor\Editor\TestWindow.cs" />
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
