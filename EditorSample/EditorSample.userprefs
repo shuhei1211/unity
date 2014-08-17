@@ -1,12 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\WindowEditor\Editor\MapTipEditor.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Desktop\hitemoticon\Assets\Scripts\Actor\Player.cs">
     <Files>
-      <File FileName="Assets\WindowEditor\Editor\BaseEditor.cs" Line="42" Column="38" />
-      <File FileName="Assets\NGUI\Scripts\Editor\NGUIEditorTools.cs" Line="662" Column="39" />
-      <File FileName="Assets\NGUI\Scripts\Editor\NGUIJson.cs" Line="355" Column="52" />
-      <File FileName="Assets\WindowEditor\Editor\MapTipEditor.cs" Line="19" Column="16" />
-      <File FileName="Assets\NGUI\Scripts\Internal\EventDelegate.cs" Line="248" Column="16" />
+      <File FileName="..\..\..\..\Desktop\hitemoticon\Assets\Scripts\Actor\Player.cs" Line="38" Column="16" />
+      <File FileName="..\..\..\..\Desktop\hitemoticon\Assets\Scripts\Base\SpaceShip.cs" Line="5" Column="19" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
