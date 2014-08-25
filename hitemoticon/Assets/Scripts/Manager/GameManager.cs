@@ -74,10 +74,10 @@ public class GameManager : BaseMonoBehaviour
 #if UNITY_ANDROID
 				if (Application.platform == RuntimePlatform.Android) {
 #endif
-						if (Input.GetKey (KeyCode.Home) || Input.GetKey (KeyCode.Escape) || Input.GetKey (KeyCode.Menu)) {
-								Application.Quit ();
-								return;
-						}
+				if (Input.GetKey (KeyCode.Home) || Input.GetKey (KeyCode.Escape) || Input.GetKey (KeyCode.Menu)) {
+						Application.Quit ();
+						return;
 				}
 		}
 }
+

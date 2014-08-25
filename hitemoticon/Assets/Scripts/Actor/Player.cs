@@ -21,10 +21,6 @@ public class Player : SpaceShip
 		private Vector2 currentPosition;	// 現在の座標
 		
 		public AudioClip audioClipDamage;
-
-		void Awake ()
-		{
-		}
 		
 		// 初期化
 		private void Init ()
@@ -49,7 +45,8 @@ public class Player : SpaceShip
 
 				Debug.Log ("width : " + Screen.width); 
 				Debug.Log ("height : " + Screen.height); 
-				Debug.Log ("cameraZero : " + pointZero.x); 
+				Debug.Log ("cameraZero : " + pointZero.x);
+				Debug.Log ("cameraZero y : " + pointZero.y);
 				Debug.Log ("cameraOne : " + pointOne.x);
 				Debug.Log ("ookisa : " + width);
 		
@@ -88,11 +85,13 @@ public class Player : SpaceShip
 				if (isMove && col.tag == "Enemy" || col.tag == "Particle") {
 						NGUITools.PlaySound (audioClipDamage);
 						isMove = false;
-						animator.SetTrigger ("Damage");
+						GetComponent<TweenColor> ().enabled = true;
+			transform.SetEulerAnglesZ (-45);
 						charaControll.DoDamage ();
 						StartCoroutine (OnWait ());
 				}
 		
+				Debug.Log (" : " + charaControll.name);
 				// HPが０以下で爆発
 				if (charaControll.PlayerHP <= 0) {
 						NGUITools.PlaySound (audioClipExplode);
@@ -112,6 +111,9 @@ public class Player : SpaceShip
 				// 移動可能
 				isMove = true;
 				directionX = 0;
+				GetComponent<TweenColor> ().enabled = false;
+				transform.SetEulerAnglesZ (0);
+				GetComponent<UISprite> ().alpha = 1.0f;
 		}
 		
 		// 発射間隔を遅らせる
@@ -143,15 +145,25 @@ public class Player : SpaceShip
 								break;
 						}
 				}
-
-				if (transform.position.x > pointZero.x && transform.position.x < pointOne.x) {
-						directionX = Input.GetAxis ("Horizontal");
-				} else {
-						directionX = 0;
-				}
+				
+				directionX = Input.GetAxis ("Horizontal");
 				transform.Translate (Vector3.right * directionX * moveSpeed * Time.deltaTime);
-				Debug.Log ("x : " + transform.localPosition.x);
-				Debug.Log ("x : " + transform.position.x);
+				
+				Vector2 currentPosition = transform.position;
+				currentPosition.x = Mathf.Clamp (currentPosition.x, pointZero.x + (width / Screen.width) / 2, pointOne.x - (width / Screen.width) / 2);
+				currentPosition.y = Mathf.Clamp (currentPosition.y, pointZero.y, pointOne.y);
+				
+				transform.position = currentPosition;
+				
+//				Debug.Log ("x : " + transform.localPosition.x);
+//				Debug.Log ("x : " + transform.position.x);
+				
+				
+//				Vector2 direction = new Vector2 (directionX, 0).normalized;
+//				currentPosition += direction * moveSpeed * Time.deltaTime;
+//				currentPosition.x = Mathf.Clamp (currentPosition.x, pointZero.x + width / 2, pointOne.x - width / 2);
+//				currentPosition.y = pointZero.y + width / 2;
+//				this.transform.position = currentPosition;
 		}
 		
 		// 弾丸発射
