@@ -16,14 +16,15 @@ public static class PrefabPath
 	public const string Prefabs_UI_Button_PlayButton = "Prefabs/UI/Button/PlayButton";
 	public const string Prefabs_UI_Button_RankButton = "Prefabs/UI/Button/RankButton";
 	public const string Prefabs_UI_Button_TableDelete = "Prefabs/UI/Button/TableDelete";
+	public const string Prefabs_UI_Item_DiamondItem = "Prefabs/UI/Item/DiamondItem";
 	public const string Prefabs_UI_Item_Life = "Prefabs/UI/Item/Life";
 	public const string Prefabs_UI_Item_LifeBar = "Prefabs/UI/Item/LifeBar";
 	public const string Prefabs_UI_Item_LifeItem = "Prefabs/UI/Item/LifeItem";
 	public const string Prefabs_UI_Item_SpeedItem = "Prefabs/UI/Item/SpeedItem";
-	public const string Prefabs_UI_Item_TimeItem = "Prefabs/UI/Item/TimeItem";
 	public const string Prefabs_UI_Label_GameTitle = "Prefabs/UI/Label/GameTitle";
 	public const string Prefabs_UI_Label_RankItem = "Prefabs/UI/Label/RankItem";
 	public const string Prefabs_UI_Label_Score = "Prefabs/UI/Label/Score";
+	public const string Prefabs_UI_Other_BlockingUI = "Prefabs/UI/Other/BlockingUI";
 	public const string Prefabs_UI_Panel_Enviroment = "Prefabs/UI/Panel/Enviroment";
 	public const string Prefabs_UI_Panel_FrontPanel = "Prefabs/UI/Panel/FrontPanel";
 	public const string Prefabs_UI_Panel_GameOver = "Prefabs/UI/Panel/GameOver";

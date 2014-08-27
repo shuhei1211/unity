@@ -7,13 +7,13 @@ public class Panel : BaseMonoBehaviour
 		{
 				GameInitialize ();
 
-				CloneManager.ClonePlayer (gameObject);
-				CloneManager.CloneFireButton (gameObject);
-				CloneManager.CloneScore (gameObject);
-				CloneManager.CloneEmitter (gameObject);
-				CloneManager.CloneLifeBar (gameObject);
-				CloneManager.CloneGameoverFlag (gameObject);
-				CloneManager.CloneFallingItem (gameObject);
+				CloneManager.CloneObject (CloneManager.Player, gameObject, "Player");
+				CloneManager.CloneObject (CloneManager.FireButton, gameObject, "FireButton");
+				CloneManager.CloneObject (CloneManager.Score, gameObject, "Score");
+				CloneManager.CloneObject (CloneManager.Emitter, gameObject, "Emitter");
+				CloneManager.CloneObject (CloneManager.LifeBar, gameObject, "LifeBar");
+				CloneManager.CloneObject (CloneManager.FlagObject, CloneManager.ParentUiRoot (), "FlagObject");
+				CloneManager.CloneObject (CloneManager.FallingItem, gameObject, "FallingItem");
 		}
 		
 		// ゲーム初期化

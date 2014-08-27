@@ -25,6 +25,15 @@ public abstract class BaseMonoBehaviour : MonoBehaviour
 				}
 		}
 		
+		protected bool IsActiveBlockUI ()
+		{
+				return GameObject.Find ("BlockingUI").activeSelf;
+		}
+		
+		protected void ToggleActiveBlockUI (bool active)
+		{
+				GameObject.Find ("BlockingUI").SetActive (active);
+		}
 		
 		
 		// Get Manager
@@ -65,7 +74,6 @@ public abstract class BaseMonoBehaviour : MonoBehaviour
 		protected BoxCollider2D _BoxCollider2D {
 				get { return boxcollider2D;}
 		}
-
 
 		protected Rigidbody2D _Rigidbody2D {
 				get { return rigidbody2D;}

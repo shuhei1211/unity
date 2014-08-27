@@ -267,5 +267,13 @@ public static class TransformExtension
 				transform.localEulerAngles = vector3;
 		}
 	#endregion
-
+	
+		public static void SetParent (this Transform transform, GameObject parent)
+		{
+				Vector3 localPosition = transform.localPosition;
+				Vector3 localScale = transform.localScale;
+				transform.parent = parent.transform;
+				transform.localPosition = localPosition;
+				transform.localScale = localScale;
+		}
 }

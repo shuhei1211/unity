@@ -38,7 +38,8 @@ public class RateButton : BaseButton
 						Debug.LogError (string.Format ("WWW error\n{0}", www.error));
 						yield break;
 				}
-				// RankingGrid.cs
+				
+				ToggleActiveBlockUI(true);
 				NGUITools.Broadcast ("CreateRankingItem", www);
 				www.Dispose ();
 		}

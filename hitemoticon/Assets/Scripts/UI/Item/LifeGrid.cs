@@ -8,16 +8,12 @@ public class LifeGrid : BaseMonoBehaviour
 		void Awake ()
 		{	
 				grid = GetComponent<UIGrid> ();
-		}
-
-		void Start ()
-		{
 				for (int i = 0; i < Config.PLAYER_HP; i++) {
-						CloneManager.CloneLife (transform);
+						CloneManager.CloneLife (gameObject);
 				}
 				grid.Reposition ();
 		}
-		
+
 		private void DecreaseLifeCount ()
 		{
 				Destroy (grid.GetChild (0).gameObject);
@@ -25,7 +21,7 @@ public class LifeGrid : BaseMonoBehaviour
 
 		private void IncreaseLifeCount ()
 		{
-				CloneManager.CloneLife (transform);
+				CloneManager.CloneLife (gameObject);
 				grid.Reposition ();
 		}
 }

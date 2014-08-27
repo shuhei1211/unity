@@ -28,11 +28,10 @@ public class BaseButton : BaseMonoBehaviour
 		/// </summary>
 		protected void EnenabledButton ()
 		{
-				if (GameObject.Find ("BlockingUI")) {
+				if (IsActiveBlockUI()) {
 						_BoxCollider2D.enabled = false;
 				} else {
 						_BoxCollider2D.enabled = true;
 				}
 		}
-		
 }

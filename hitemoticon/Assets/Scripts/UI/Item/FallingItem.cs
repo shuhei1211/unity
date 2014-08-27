@@ -8,8 +8,8 @@ public class FallingItem : MonoBehaviour
 		/// from ScoreManager
 		/// </summary>
 		/// <param name="go">Go.</param>
-		private void FallItem (GameObject go)
+		private void FallItem (GameObject target)
 		{
-				CloneManager.CloneItem (transform, go);
+				CloneManager.CloneItem (gameObject, target);
 		}
 }

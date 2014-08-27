@@ -39,13 +39,15 @@ public class Player : SpaceShip
 				pointZero = camera.ViewportToWorldPoint (new Vector2 (0, 0));	// 左下の座標
 				pointOne = camera.ViewportToWorldPoint (new Vector2 (1, 1));	// 右上の座標
 				width = gameObject.GetComponent<UISprite> ().width;	// プレイヤーの幅を取得
-		
+				
 				Debug.Log ("width : " + Screen.width); 
 				Debug.Log ("height : " + Screen.height); 
 				Debug.Log ("cameraZero : " + pointZero.x);
 				Debug.Log ("cameraZero y : " + pointZero.y);
 				Debug.Log ("cameraOne : " + pointOne.x);
 				Debug.Log ("ookisa : " + width);
+				Debug.Log ("localy : " + transform.localPosition.y);
+				Debug.Log ("worldy : " + transform.position.y);
 		
 		}
 	
@@ -78,8 +80,6 @@ public class Player : SpaceShip
 	
 		void OnTriggerEnter2D (Collider2D col)
 		{
-				Debug.Log ("衝突");
-
 				// 敵もしくは敵の爆発と衝突
 				if (isMove && col.tag == "Enemy" || col.tag == "Particle") {
 						NGUITools.PlaySound (audioClipDamage);

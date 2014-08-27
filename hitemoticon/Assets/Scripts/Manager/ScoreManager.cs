@@ -53,9 +53,9 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 		{
 				commbo++;
 				SetScore (score + GetCommboCount () * GetCommboCount ());
-				if (GetCommboCount () % 70 == 0 && !GameObject.Find ("LifeItem")) {
+				if (GetCommboCount () % 1 == 0 && !GameObject.Find ("LifeItem")) {
 						GameObject.Find ("FallingItem").SendMessage ("FallItem", CloneManager.LifeItem);
-				} else if (GetCommboCount () % 3 == 0 && !_StateManager.IsFeverMode ()) {
+				} else if (GetCommboCount () % 1 == 0 && !_StateManager.IsFeverMode ()) {
 						GameObject.Find ("FallingItem").SendMessage ("FallItem", CloneManager.SpeedItem);
 						_StateManager.SetState ((int)Enum.State.FEVER);
 				} else if (GetCommboCount () % 7 == 0) {
