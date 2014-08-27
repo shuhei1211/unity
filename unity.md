@@ -25,3 +25,7 @@
 
 #### Sprite Sheetes ####
 [http://www.codeandweb.com/blog/2014/03/28/using-spritesheets-with-unity](http://www.codeandweb.com/blog/2014/03/28/using-spritesheets-with-unity)
+
+
+#### Delegate ####
+http://yohshiy.blog.fc2.com/blog-entry-263.html
