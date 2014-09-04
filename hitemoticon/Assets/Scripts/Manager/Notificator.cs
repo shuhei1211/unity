@@ -21,7 +21,12 @@ public class Notificator : SingletonMonoBehaviour<Notificator>
 				go.GetComponent<TweenPosition> ().from.y = position.y + 450;
 				go.GetComponent<TweenPosition> ().to.x = position.x - 100;
 				go.GetComponent<TweenPosition> ().to.y = position.y + 500;
-				go.GetComponent<UILabel>().text = "" + ScoreManager.Instance.CalulateCommboScore().ToString();
+				go.GetComponent<UILabel> ().text = "" + ScoreManager.Instance.CalulateCommboScore ().ToString ();
 				Destroy (go, 1f);
+		}
+
+		public void CutInObject ()
+		{
+			
 		}
 }

@@ -18,7 +18,7 @@ public class Emitter : BaseMonoBehaviour
 						}
 						
 						if (_StateManager.IsFeverMode) {
-								float acceratorInterval = 0.03f;
+								float acceratorInterval = 0.015f;
 								CloneManager.CloneEnemy (gameObject);
 								timer = timer + 0.1f;
 								if (timer > waitTime) {
