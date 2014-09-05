@@ -17,11 +17,11 @@ public class UIScore : BaseMonoBehaviour
 		
 		void Start ()
 		{
-				scoreLabel.text = "SCORE : " + 0;
+				scoreLabel.text = "" + 0;
 		}
 	
 		void Update ()
 		{
-				scoreLabel.text = "SCORE : " + _ScoreManager.GetScore ();
+				scoreLabel.text = "" + _ScoreManager.GetScore ();
 		}
 }
