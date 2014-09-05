@@ -9,10 +9,14 @@ using System.Collections;
 [RequireComponent(typeof(UIButtonScale))]
 public abstract class BaseButton : BaseMonoBehaviour
 {
+		public enum ClickEvent {
+			
+		}
+
 		void Start ()
 		{
 				_UISprite.ResizeCollider ();
-				_BoxCollider2D.isTrigger = true;
+				boxcollider2D.isTrigger = true;
 				_UIButtonScale.hover = Vector3.one;
 				_UIButton.onClick.Add (new EventDelegate (OnClickPlaySound));
 		}
@@ -33,9 +37,9 @@ public abstract class BaseButton : BaseMonoBehaviour
 		protected void EnenabledButton ()
 		{
 				if (GameObject.Find ("BlockingUI")) {
-						_BoxCollider2D.enabled = false;
+						boxcollider2D.enabled = false;
 						return;
 				}
-				_BoxCollider2D.enabled = true;
+				boxcollider2D.enabled = true;
 		}
 }

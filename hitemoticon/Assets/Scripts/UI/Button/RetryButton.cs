@@ -8,7 +8,7 @@ public class RetryButton : BaseButton
 {
 		public void GameRetry ()
 		{
-				_UIPlaySound.Play ();
+				base.OnClickPlaySound();
 				CameraFade.StartAlphaFade (Color.black, true, 3f);
 				GameObject.Find ("GameManager").SendMessage ("ReStart");
 				Destroy (CloneManager.ParentPanel ());

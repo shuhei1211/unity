@@ -3,8 +3,13 @@ using System.Collections;
 
 public class LifeItem : BaseItem
 {
+		public delegate void OnCallback ();
+	
+		public OnCallback callback;
+
 		protected override void EffectedItem ()
 		{
-				charaControll.AddLife ();
+				callback = _Notificator.OnEffectedLifeItem;
+				callback();
 		}
 }

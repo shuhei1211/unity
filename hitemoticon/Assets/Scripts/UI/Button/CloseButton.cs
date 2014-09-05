@@ -5,7 +5,7 @@ public class CloseButton : BaseButton
 {
 		void Update ()
 		{
-				_BoxCollider2D.enabled = true;
+				boxcollider2D.enabled = true;
 		}
 		
 		/// <summary>

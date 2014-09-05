@@ -18,7 +18,7 @@ public class Emitter : BaseMonoBehaviour
 						}
 						
 						if (_StateManager.IsFeverMode) {
-								float acceratorInterval = 0.015f;
+								float acceratorInterval = 0.005f;
 								CloneManager.CloneEnemy (gameObject);
 								timer = timer + 0.1f;
 								if (timer > waitTime) {
@@ -35,6 +35,11 @@ public class Emitter : BaseMonoBehaviour
 								yield return new WaitForSeconds (interval);
 						}
 				}
+		}
+		
+		void Update ()
+		{
+				GetComponent<TweenPosition> ().enabled = Time.timeScale == 0 ? false : true;
 		}
 		
 		private void OnSpeedSpwan ()

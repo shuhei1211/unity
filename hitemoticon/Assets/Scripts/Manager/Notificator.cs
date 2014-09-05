@@ -21,12 +21,38 @@ public class Notificator : SingletonMonoBehaviour<Notificator>
 				go.GetComponent<TweenPosition> ().from.y = position.y + 450;
 				go.GetComponent<TweenPosition> ().to.x = position.x - 100;
 				go.GetComponent<TweenPosition> ().to.y = position.y + 500;
-				go.GetComponent<UILabel> ().text = "" + ScoreManager.Instance.CalulateCommboScore ().ToString ();
+				go.GetComponent<UILabel> ().text = "" + _ScoreManager.CalulateCommboScore ();
 				Destroy (go, 1f);
 		}
 
-		public void CutInObject ()
+		/// <summary>
+		/// スピードアイテムを取得
+		/// </summary>
+		public void OnEffectedSppedItem ()
 		{
-			
+				StartCoroutine (OnTakeItem ());
+		}
+		
+		/// <summary>
+		/// ライフアイテムを取得
+		/// </summary>
+		public void OnEffectedLifeItem ()
+		{
+				charaControll.AddLife ();
+		}
+		
+		IEnumerator OnTakeItem ()
+		{
+				GameObject feverObject = Instantiate (Resources.Load (PrefabPath.Prefabs_UI_Other_Fever)) as GameObject;
+				feverObject.transform.SetParent (CloneManager.ParentUiRoot ());
+//				Time.timeScale = 0f;
+//				float pauseEndTime = Time.realtimeSinceStartup + 2.5f;
+//				while (Time.realtimeSinceStartup < pauseEndTime) {
+//						yield return 0;
+//				}
+//				Time.timeScale = 1f;
+				yield return new WaitForSeconds(2.5f);
+				Destroy (feverObject);
+				GameObject.Find ("Emitter").SendMessage ("OnSpeedSpwan");
 		}
 }

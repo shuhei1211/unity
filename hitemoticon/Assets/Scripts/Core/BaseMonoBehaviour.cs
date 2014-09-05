@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 /// <summary>
 /// Base mono behaviour.
@@ -15,6 +16,7 @@ public abstract class BaseMonoBehaviour : MonoBehaviour
 						return null;
 				}
 		}
+		
 
 		// Get Controller
 		//_____________________________________________________________________________
@@ -70,34 +72,47 @@ public abstract class BaseMonoBehaviour : MonoBehaviour
 		// Get Component 
 		//_____________________________________________________________________________
 	
+		private UISprite uisprite;
+		private UIButton uibutton;
+		private UIButtonScale uibuttonscale;
+		private UIWidget uiwidget;
+
 		protected UISprite _UISprite {
-				get { return GetComponent<UISprite> ();}
+				get { 
+						if (uisprite == null) {
+								uisprite = GetComponent<UISprite> ();
+						}
+						return uisprite;
+				}
 		}
 	
 		protected UIButton _UIButton {
-				get { return GetComponent<UIButton> ();}
-		}
-	
-		protected UIPlaySound _UIPlaySound {
-				get { return GetComponent<UIPlaySound> ();}
+				get { 
+						if (uibutton == null) {
+								uibutton = GetComponent<UIButton> ();
+						}
+						return uibutton;
+				}
 		}
 	
 		protected UIButtonScale _UIButtonScale {
-				get { return GetComponent<UIButtonScale> ();}
+				get { 
+						if (uibuttonscale == null) {
+								uibuttonscale = GetComponent<UIButtonScale> ();
+						}
+						return uibuttonscale;
+				}
 		}
 
 		protected UIWidget _UIWidget {
-				get { return GetComponent<UIWidget> ();}
+				get { 
+						if (uiwidget == null) {
+								uiwidget = GetComponent<UIWidget> ();
+						}
+						return uiwidget;
+				}
 		}
 	
-		protected BoxCollider2D _BoxCollider2D {
-				get { return boxcollider2D;}
-		}
-
-		protected Rigidbody2D _Rigidbody2D {
-				get { return rigidbody2D;}
-		}
-
 		
 		// GetComponentを複数回呼び出さない
 		//_____________________________________________________________________________

@@ -56,7 +56,7 @@ public class ScoreManager : SingletonMonoBehaviour<ScoreManager>
 				
 				if (GetCommboCount () % 120 == 0 && !GameObject.Find ("LifeItem")) {
 						GameObject.Find ("FallingItem").SendMessage ("FallItem", CloneManager.LifeItem);
-				} else if (GetCommboCount () % 25 == 0) {
+				} else if (GetCommboCount () % 1 == 0) {
 						if (GameObject.Find ("SpeedItem") || _StateManager.IsFeverMode) {
 								return;
 						}

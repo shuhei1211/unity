@@ -26,6 +26,7 @@ public static class PrefabPath
 	public const string Prefabs_UI_Label_RankItem = "Prefabs/UI/Label/RankItem";
 	public const string Prefabs_UI_Label_Score = "Prefabs/UI/Label/Score";
 	public const string Prefabs_UI_Other_BlockingUI = "Prefabs/UI/Other/BlockingUI";
+	public const string Prefabs_UI_Other_Fever = "Prefabs/UI/Other/Fever";
 	public const string Prefabs_UI_Panel_Enviroment = "Prefabs/UI/Panel/Enviroment";
 	public const string Prefabs_UI_Panel_FrontPanel = "Prefabs/UI/Panel/FrontPanel";
 	public const string Prefabs_UI_Panel_GameOver = "Prefabs/UI/Panel/GameOver";

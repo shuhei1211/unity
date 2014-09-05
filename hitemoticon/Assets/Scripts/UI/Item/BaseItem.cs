@@ -7,6 +7,7 @@ using System.Collections;
 public abstract class BaseItem : BaseMonoBehaviour
 {
 		private float startPositionX;
+		
 		private delegate void OnTriggerCallback ();
 		private OnTriggerCallback triggerCallback;
 		

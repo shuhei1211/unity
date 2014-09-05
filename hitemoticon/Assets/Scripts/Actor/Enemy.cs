@@ -22,6 +22,7 @@ public class Enemy : SpaceShip
 				if (gameObject.transform.position.y < 0.91) {
 						GetComponent<CircleCollider2D> ().enabled = true;
 				}
+				GetComponent<TweenRotation> ().enabled = Time.timeScale == 0 ? false : true;
 		}
 		
 		protected void Move ()

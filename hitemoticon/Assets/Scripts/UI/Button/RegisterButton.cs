@@ -6,7 +6,7 @@ public class RegisterButton : BaseButton
 {
 		void Update ()
 		{
-				_BoxCollider2D.enabled = true;
+				boxcollider2D.enabled = true;
 		}
 
 		public void OnClick ()

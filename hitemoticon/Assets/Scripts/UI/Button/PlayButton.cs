@@ -8,7 +8,6 @@ public class PlayButton : BaseButton
 {
 		public void GameStart ()
 		{
-				CameraFade.StartAlphaFade (Color.black, true, 3f);
 				_StateManager.SetState ((int)SceneState.START);
 		}
 }
