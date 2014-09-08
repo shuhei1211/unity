@@ -7,6 +7,14 @@ using System.Collections;
 public class Notificator : SingletonMonoBehaviour<Notificator>
 {
 
+		public void OnClickReadStart ()
+		{
+				CloneManager.CloneMainPanel ();
+				if (GameObject.Find ("Panel")) {
+						_StateManager.SetState ((int)SceneState.NORMAL);
+				}
+		}
+
 		/// <summary>
 		/// スコアのポップさせる
 		/// </summary>
@@ -51,7 +59,7 @@ public class Notificator : SingletonMonoBehaviour<Notificator>
 //						yield return 0;
 //				}
 //				Time.timeScale = 1f;
-				yield return new WaitForSeconds(2.5f);
+				yield return new WaitForSeconds (2.5f);
 				Destroy (feverObject);
 				GameObject.Find ("Emitter").SendMessage ("OnSpeedSpwan");
 		}

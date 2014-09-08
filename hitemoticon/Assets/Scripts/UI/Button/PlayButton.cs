@@ -8,6 +8,8 @@ public class PlayButton : BaseButton
 {
 		public void GameStart ()
 		{
-				_StateManager.SetState ((int)SceneState.START);
+				CameraFade.StartAlphaFade (Color.black, true, 3f);
+				Destroy (CloneManager.ParentFrontPanel ());
+				CloneManager.CloneReadyPanel ();
 		}
 }

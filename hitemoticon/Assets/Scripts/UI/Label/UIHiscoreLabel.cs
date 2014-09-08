@@ -19,6 +19,6 @@ public class UIHiscoreLabel : BaseMonoBehaviour
 						NGUITools.Save ("score.txt", b);
 						score = "0";
 				}
-				hiscore.text = "SCORE : " + score;
+				hiscore.text = score;
 		}
 }

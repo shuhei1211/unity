@@ -32,5 +32,6 @@ public static class PrefabPath
 	public const string Prefabs_UI_Panel_GameOver = "Prefabs/UI/Panel/GameOver";
 	public const string Prefabs_UI_Panel_MainPanel = "Prefabs/UI/Panel/MainPanel";
 	public const string Prefabs_UI_Panel_RankingBackground = "Prefabs/UI/Panel/RankingBackground";
+	public const string Prefabs_UI_Panel_ReadyPanel = "Prefabs/UI/Panel/ReadyPanel";
 	public const string Prefabs_UI_Panel_RegisterPanel = "Prefabs/UI/Panel/RegisterPanel";
 }

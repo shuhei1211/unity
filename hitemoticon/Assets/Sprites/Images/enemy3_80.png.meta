@@ -1,6 +1,8 @@
 fileFormatVersion: 2
-guid: 5e4c5a3dc9f3f9f409152781ad153b47
+guid: 4dc82095b49815c4abfa4dc13d179ef8
 TextureImporter:
+  fileIDToRecycleName:
+    21300000: enemy3_80
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -26,7 +28,7 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -35,6 +37,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaIsTransparency: 0
   textureType: 5

@@ -51,6 +51,12 @@ public class CloneManager : BaseMonoBehaviour
 				clone.SettingClone (ParentCorePanel, "MainPanel");
 		}
 
+		public static void CloneReadyPanel ()
+		{
+				GameObject clone = Instantiate (ReadyPanel) as GameObject;
+				clone.SettingClone (ParentCorePanel, "ReadyPanel");
+		}
+
 		public static void CloneRankingPanel ()
 		{
 				if (ParentRankingPanel ())
@@ -80,6 +86,10 @@ public class CloneManager : BaseMonoBehaviour
 		public static GameObject ParentFrontPanel ()
 		{
 				return GameObject.Find ("FrontPanel");
+		}
+
+		public static GameObject ParentReadyPanel {
+				get{ return GameObject.Find ("ReadyPanel");}
 		}
 		
 		public static GameObject ParentEmitter ()
@@ -113,6 +123,10 @@ public class CloneManager : BaseMonoBehaviour
 	
 		public static GameObject FrontPanel {
 				get { return Resources.Load (PrefabPath.Prefabs_UI_Panel_FrontPanel) as GameObject;}
+		}
+
+		public static GameObject ReadyPanel {
+				get { return Resources.Load (PrefabPath.Prefabs_UI_Panel_ReadyPanel) as GameObject;}
 		}
 		
 		public static GameObject GameOver {
