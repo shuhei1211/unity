@@ -14,6 +14,7 @@ public abstract class SpaceShip : BaseMonoBehaviour
 		/// </summary>
 		protected void createParticle ()
 		{
+				Resources.UnloadUnusedAssets ();
 				_SoundManager.PlaySE ((int)SE.EXPLODE_ONE);
 				GameObject clone = Instantiate (particle, transform.position, Quaternion.identity) as GameObject;
 				clone.transform.parent = gameObject.transform.parent;

@@ -8,9 +8,9 @@ public class RetryButton : BaseButton
 {
 		public void GameRetry ()
 		{
-				base.OnClickPlaySound();
+				base.OnClickPlaySound ();
 				CameraFade.StartAlphaFade (Color.black, true, 3f);
-				GameObject.Find ("GameManager").SendMessage ("ReStart");
+				CloneManager.CloneReadyPanel ();
 				Destroy (CloneManager.ParentPanel ());
 				Destroy (CloneManager.ParentGameOver ());
 		}

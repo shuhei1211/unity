@@ -39,18 +39,6 @@ public class GameManager : SingletonMonoBehaviour<GameManager>
 				CloneManager.CloneRegisterPanel ();
 		}
 	
-		// ゲームをリトライ
-		private void ReStart ()
-		{
-				StartCoroutine (WaitReStart ());
-		}
-	
-		IEnumerator WaitReStart ()
-		{
-				yield return new WaitForSeconds (0.5f);
-				_StateManager.SetState ((int)SceneState.START);
-		}
-	
 		private void InitCommboTimer ()
 		{
 				this.timer = 0;

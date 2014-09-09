@@ -25,6 +25,7 @@ public class Player : SpaceShip
 				moveSpeed = 1.5f;
 				isMove = true;
 				isShotDelay = true;
+				isShotRequest = true;
 		}
 	
 		void Start ()
@@ -101,18 +102,20 @@ public class Player : SpaceShip
 		// 発射間隔を遅らせる
 		private IEnumerator ShotDelay ()
 		{
-				yield return new WaitForSeconds (0.4f);
+				yield return new WaitForSeconds (0.5f);
 				isShotDelay = true;
 		}
+
+		private float directionX = 0f;
 	
 		// プレイヤーの移動
 		protected void Move ()
 		{
 				if (!isMove) {
+						directionX = 0f;
 						return;
 				}
 				
-				float directionX = 0f;
 				if (Input.touchCount > 0) {
 						Touch touch = Input.GetTouch (0);
 			
@@ -130,9 +133,11 @@ public class Player : SpaceShip
 								break;
 						}
 				}
+				
 				#if UNITY_EDITOR
 				directionX = Input.GetAxis ("Horizontal");
 				#endif
+
 				transform.Translate (Vector3.right * directionX * moveSpeed * Time.deltaTime);
 		
 				Vector2 currentPosition = transform.position;

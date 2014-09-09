@@ -6,7 +6,7 @@ using System.Collections;
 /// </summary>
 public class FireButton : BaseMonoBehaviour
 {
-		private bool isToggleFlag = true;
+		private bool isToggleFlag = false;
 
 		public void onPress ()
 		{
